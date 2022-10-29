@@ -16,9 +16,5 @@ Non-functional req
   
 Architectural Diagram
 
-Collections
- - users
- - transactions (available + done)
- - stocks
 
  
