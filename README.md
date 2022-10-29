@@ -15,6 +15,7 @@ Non-functional req
   - performance: all requests should be done in 1 second, even when the number of concurrent users in the app increases
   
 Architectural Diagram
+![image](https://user-images.githubusercontent.com/30629359/198845221-9ad4d2e9-5e36-4785-b657-43d0171ad7e5.png)
 
 
  
