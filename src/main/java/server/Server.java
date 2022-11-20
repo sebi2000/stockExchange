@@ -1,46 +1,60 @@
 package server;
 
-import java.net.*;
-import java.io.*;
-class Server{
-    public static void main(String args[])throws Exception{
-        ServerSocket ss=new ServerSocket(3333);
-        Socket s=ss.accept();
-        DataInputStream din=new DataInputStream(s.getInputStream());
-        DataOutputStream dout=new DataOutputStream(s.getOutputStream());
-        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+import utils.Helpers;
 
+import java.io.IOException;
+import java.util.UUID;
 
-        String str="",str2="";
-        while(!str.equals("stop")){
+public class Server extends Thread {
+    private String operation;
+    private int amount;
+    private UUID userId;
 
-            str=din.readUTF();
-            if(str.equals( "Buy")){
-                System.out.println("Am intrat in if");
-                Thread thread = new Thread(Server.printWTF());
-                dout.writeUTF("Buy in if");
+    public void run() {
+        try {
+            if (operation.equals("sell")) {
+                System.out.println(userId + ": " + this.sellStock(amount));
+            } else {
+                System.out.println(userId + ": " + this.buyStock(amount));
             }
-            if(str.equals("Sell")){
-                Thread thread = new Thread(Server.printWTF2());
-                dout.writeUTF("Sold");
-            }
-            System.out.println("client says: "+str);
-            str2=br.readLine();
-            dout.writeUTF(str2);
-            dout.flush();
+        } catch (Exception e) {
+            System.out.println(userId + ": " + "Ex" + e);
         }
-        din.close();
-        s.close();
-        ss.close();
     }
 
-    static String printWTF(){
-        System.out.println("Buying");
-
-        return "Buying";
+    public void getOperation(String operation) {
+        this.operation = operation;
     }
 
-    static String printWTF2(){
-        return "Selling";
+    public void getAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public String sellStock(int amount) {
+        String toWrite = this.userId + " sold " + amount;
+        try {
+            Helpers.writeInHistory(toWrite);
+            return "You have successfully sold " + amount;
+        } catch (IOException e) {
+            System.out.println(userId + ": " + "There was a problem when selling the stock");
+            return e.toString();
+        }
+    }
+
+    public String buyStock(int amount) {
+        String toWrite = this.userId + " bought " + amount;
+        try {
+            Helpers.writeInHistory(toWrite);
+            return "You have successfully bought " + amount;
+        } catch (IOException e) {
+            System.out.println(userId + ": " + "There was a problem when selling the stock");
+            return e.toString();
+        }
+
+    }
+
+    public void getUserId(UUID userId) {
+        this.userId = userId;
     }
 }
+
