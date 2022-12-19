@@ -56,5 +56,9 @@ public class Server extends Thread {
     public void getUserId(UUID userId) {
         this.userId = userId;
     }
+
+    public static void main(String[] args){
+        //run();
+    }
 }
 
