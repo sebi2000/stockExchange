@@ -1,0 +1,8 @@
+c61ce7bb-d530-46db-8abd-fcffab2ddd93 bought 10
+c61ce7bb-d530-46db-8abd-fcffab2ddd93 sold 10
+7ffa0f7a-fea3-41e3-97ff-7d9955e273c5 sold 5
+7ffa0f7a-fea3-41e3-97ff-7d9955e273c5 bought 5
+7ffa0f7a-fea3-41e3-97ff-7d9955e273c5 sold 20
+dc7b4d03-290f-40b2-83e1-25ab43a44caa sold 20
+dc7b4d03-290f-40b2-83e1-25ab43a44caa bought 555
+dc7b4d03-290f-40b2-83e1-25ab43a44caa sold 1
