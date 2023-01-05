@@ -1,5 +1,9 @@
 package Entities;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
 public class Client {
     public String identifier = "dummy";
 
@@ -11,11 +15,15 @@ public class Client {
         return identifier;
     }
 
-    public Transaction sell(String item, int count) {
-        return new Transaction(item, count, this);
+    public Offer sell(String item, int count) {
+        return new Offer(item, count, this);
     }
 
-    public Transaction buy(String item, int count) {
-        return new Transaction(item, -count, this);
+    public Offer buy(String item, int count) {
+        return new Offer(item, -count, this);
+    }
+
+    public void placeOffer(Offer offer) {
+
     }
 }

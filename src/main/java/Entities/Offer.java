@@ -1,12 +1,12 @@
 package Entities;
 
-public class Transaction {
+public class Offer {
 
     private int count;
     private String item;
     private Client op;
 
-    public Transaction(String item, int count, Client op) {
+    public Offer(String item, int count, Client op) {
         this.item = item;
         this.count = count;
         this.op = op;
@@ -21,7 +21,7 @@ public class Transaction {
         return String.format("%s %s %d %s", op, type, Math.abs(count), item);
     }
 
-    public void merge(Transaction with) {
+    public void merge(Offer with) {
         if (!item.equals(with.item)) {
             return;
         }

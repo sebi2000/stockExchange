@@ -1,6 +1,5 @@
 package Entities;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,29 +7,30 @@ public class StockExchange {
 
     private static StockExchange instance = null;
 
-    private static volatile List<Transaction> transactions = new ArrayList<>();
+    private static volatile List<Offer> transactions = new ArrayList<>();
 
     private StockExchange() {
 
     }
 
-     public static synchronized void processTransaction(Transaction transaction) {
-        ArrayList<Transaction> result = new ArrayList<>();
-        for (Transaction t : transactions) {
-            t.merge(transaction);
+     public static synchronized void processTransaction(Offer offer) {
+        ArrayList<Offer> result = new ArrayList<>();
+        for (Offer t : transactions) {
+            t.merge(offer);
             if (!t.isSettled()) {
                 result.add(t);
             }
         }
-        if (!transaction.isSettled()) {
-            result.add(transaction);
+        if (!offer.isSettled()) {
+            result.add(offer);
         }
         transactions = result;
-        System.out.println(transactions);
+         System.out.print(Thread.currentThread().threadId());
+         System.out.println(transactions);
     }
 
     public void printTransactions() {
-        for (Transaction t: transactions) {
+        for (Offer t: transactions) {
             System.out.println(t);
         }
     }

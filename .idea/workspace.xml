@@ -5,31 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44fccc4b-9cb2-438d-92f6-e337ea2c9543" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Offer/Offer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Stock/Stock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/User/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/history.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockExchange/Operator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockExchange/StockExchange.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockExchange/StockServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/stockExchange/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/server/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Offer/Offer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Stock/Stock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/User/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/stockExchange/Operator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/stockExchange/StockExchange.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/stockExchange/StockServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/stockExchange/Transaction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/Helpers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Offer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,10 +120,22 @@
       <workItem from="1672859184314" duration="1764000" />
       <workItem from="1672937910226" duration="341000" />
       <workItem from="1672938272052" duration="2392000" />
+      <workItem from="1672941231080" duration="8867000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
