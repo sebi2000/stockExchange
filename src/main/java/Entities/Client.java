@@ -1,9 +1,9 @@
-package org.stockExchange;
+package Entities;
 
-public class Operator {
+public class Client {
     public String identifier = "dummy";
 
-    public Operator(String identifier){
+    public Client(String identifier){
         this.identifier = identifier;
     }
 

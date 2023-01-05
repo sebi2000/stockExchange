@@ -1,12 +1,12 @@
-package org.stockExchange;
+package Entities;
 
 public class Transaction {
 
     private int count;
     private String item;
-    private Operator op;
+    private Client op;
 
-    public Transaction(String item, int count, Operator op) {
+    public Transaction(String item, int count, Client op) {
         this.item = item;
         this.count = count;
         this.op = op;
@@ -40,7 +40,7 @@ public class Transaction {
         }
     }
 
-    private void recordTransfer(int value, Operator destination) {
+    private void recordTransfer(int value, Client destination) {
         // buying
         if (count < 0) {
             System.out.printf("%s buys %d %s from %s\n", op, -value, item, destination);
