@@ -6,14 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="44fccc4b-9cb2-438d-92f6-e337ea2c9543" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Offer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Offer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Offer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Offer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Transaction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +121,9 @@
       <workItem from="1672937910226" duration="341000" />
       <workItem from="1672938272052" duration="2392000" />
       <workItem from="1672941231080" duration="8867000" />
+      <workItem from="1673027361954" duration="9657000" />
+      <workItem from="1673078979927" duration="20304000" />
+      <workItem from="1673172969240" duration="7213000" />
     </task>
     <servers />
   </component>
