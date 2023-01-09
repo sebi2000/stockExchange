@@ -1,12 +1,7 @@
 import Entities.Client;
 import Entities.Offer;
 import Entities.StockExchange;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String args[]) {
@@ -22,27 +17,27 @@ public class Main {
         Offer offer4 = new Offer("cartofi", 10, rares);
         Offer offer5 = new Offer("mere", 6, rares);
 
-        List<Offer> initialOffers = new ArrayList<>();
-        initialOffers.add(offer1);
-        initialOffers.add(offer2);
-        initialOffers.add(offer3);
-        initialOffers.add(offer4);
-        initialOffers.add(offer5);
+        se.start();
 
-        for (Offer offer: initialOffers) {
-            Thread t = new Thread(() -> {
-                se.addOffer(offer);
-            });
-            t.start();
+        try {
+            se.addOffer(offer1);
+            Thread.sleep(1000);
+            se.addOffer(offer2);
+            Thread.sleep(1000);
+            se.addOffer(offer3);
+            Thread.sleep(1000);
+            se.addOffer(offer4);
+            Thread.sleep(1000);
+            se.addOffer(offer5);
+        } catch(Exception e) {
+            System.out.println(e);
         }
 
-        Thread t = new Thread(() -> {
-//            while(true){
-//                se.processTransactions();
-//            }
-            se.processTransactions();
-        });
-        t.start();
+        Scanner scan = new Scanner(System.in);
+        String text = scan.nextLine();
 
+        if(text.equals("stop")) {
+            se.stopExecution();
+        }
     }
 }

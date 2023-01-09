@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="44fccc4b-9cb2-438d-92f6-e337ea2c9543" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/Offer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/Offer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Offer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/Offer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/Transaction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,14 +37,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sebastian.stoicescu/facultyStuff/CEBP/stockExchange&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/sebastian.stoicescu/facultyStuff/CEBP/stockExchange",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="client.Client" />
@@ -123,7 +119,7 @@
       <workItem from="1672941231080" duration="8867000" />
       <workItem from="1673027361954" duration="9657000" />
       <workItem from="1673078979927" duration="20304000" />
-      <workItem from="1673172969240" duration="7213000" />
+      <workItem from="1673172969240" duration="32674000" />
     </task>
     <servers />
   </component>

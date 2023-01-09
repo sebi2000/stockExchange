@@ -1,15 +1,11 @@
 package Entities;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+
 
 public class StockExchange {
 
     private static StockExchange instance = null;
+    private static Thread thread = new Thread(() -> {startMarket();});
 
     private static CopyOnWriteArrayList<Offer> offers = new CopyOnWriteArrayList<>();
 
@@ -18,7 +14,11 @@ public class StockExchange {
     }
 
     public void addOffer(Offer offer) {
-        offers.add(offer);
+        Thread t = new Thread(() -> {
+            System.out.println("Adding offer to the market...");
+            offers.add(offer);
+        });
+        t.start();
     }
 
     public static void checkMatch(Offer currentOffer, Offer targetOffer) {
@@ -42,35 +42,39 @@ public class StockExchange {
     private static void recordTransfer(Offer currentOffer, Offer targetOffer) {
         // buying
         if (currentOffer.count < 0) {
-            System.out.printf("%s buys %d %s from %s\n", currentOffer.op, -currentOffer.count, currentOffer.item, targetOffer.op);
+            System.out.printf("Match: %s buys %d %s from %s\n", currentOffer.op, -currentOffer.count, currentOffer.item, targetOffer.op);
         }
         // selling
         else {
-            System.out.printf("%s buys %d %s from %s\n", targetOffer.op, targetOffer.count, targetOffer.item, currentOffer.op);
+            System.out.printf("Match: %s buys %d %s from %s\n", targetOffer.op, targetOffer.count, targetOffer.item, currentOffer.op);
         }
     }
 
-    public static void processTransactions() {
-        System.out.println(offers);
-        for (Offer offer : offers) {
-            //if(offer.lock.tryLock()) {
-                for (Offer targetOffer : offers) {
-//                    if(targetOffer.lock.tryLock()) {
-                        checkMatch(offer, targetOffer);
-                        if (offer.isSettled()) {
-                            offers.remove(offer);
-                        } else if (targetOffer.isSettled()) {
-                            offers.remove(targetOffer);
-                        }
-                        //targetOffer.lock.unlock();
-                    //}
-                }
-                //offer.lock.unlock();
-            //}
-        }
-        System.out.println(offers);
-        //System.out.print(Thread.currentThread().getName());
+    public static void start() {
+        thread.start();
+    }
 
+    public static void startMarket(){
+            System.out.println("Starting the market...");
+            while(true){
+                    if (Thread.interrupted()) {
+                        break;
+                    }
+                    for (Offer offer : offers) {
+                        for (Offer targetOffer : offers) {
+                            checkMatch(offer, targetOffer);
+                            if (offer.isSettled()) {
+                                offers.remove(offer);
+                            } else if (targetOffer.isSettled()) {
+                                offers.remove(targetOffer);
+                            }
+                        }
+                    }
+            }
+    }
+
+    public static void stopExecution() {
+        thread.interrupt();
     }
 
     public void printTransactions() {
