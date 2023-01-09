@@ -1,11 +1,27 @@
 package Entities;
+import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
+
+import com.rabbitmq.client.AMQP;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+
+import java.nio.charset.StandardCharsets;
 
 
 public class StockExchange {
 
+    private final static String QUEUE_NAME = "completed";
+
     private static StockExchange instance = null;
-    private static Thread thread = new Thread(() -> {startMarket();});
+    private static Thread thread = new Thread(() -> {
+        try {
+            startMarket();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    });
 
     private static CopyOnWriteArrayList<Offer> offers = new CopyOnWriteArrayList<>();
 
@@ -21,7 +37,7 @@ public class StockExchange {
         t.start();
     }
 
-    public static void checkMatch(Offer currentOffer, Offer targetOffer) {
+    public static void checkMatch(Offer currentOffer, Offer targetOffer) throws Exception {
         if (!(currentOffer.item.equals(targetOffer.item))) {
             return;
         }
@@ -39,22 +55,67 @@ public class StockExchange {
         }
     }
 
-    private static void recordTransfer(Offer currentOffer, Offer targetOffer) {
-        // buying
-        if (currentOffer.count < 0) {
-            System.out.printf("Match: %s buys %d %s from %s\n", currentOffer.op, -currentOffer.count, currentOffer.item, targetOffer.op);
+    private static void recordTransfer(Offer currentOffer, Offer targetOffer) throws Exception {
+
+        String message;
+        ConnectionFactory factory = new ConnectionFactory();
+        factory.setHost("localhost");
+        Connection connection = factory.newConnection();
+
+        try {
+            Channel channel = connection.createChannel();
+
+            try {
+                channel.queueDeclare("completed", false, false, false, (Map)null);
+                // buying
+                if (currentOffer.count < 0) {
+                    message ="Match: " + currentOffer.op +" buys "+ -currentOffer.count +" "+ currentOffer.item +" from "+ targetOffer.op;
+                }
+                else {
+                    message ="Match: " + targetOffer.op +" buys "+ targetOffer.count +" "+ targetOffer.item +" from "+ currentOffer.op;
+                }
+                //String message = "Hello World!";
+                channel.basicPublish("", "completed", (AMQP.BasicProperties)null, message.getBytes(StandardCharsets.UTF_8));
+                //System.out.println(" [x] Sent '" + message + "'");
+            } catch (Throwable var8) {
+                if (channel != null) {
+                    try {
+                        channel.close();
+                    } catch (Throwable var7) {
+                        var8.addSuppressed(var7);
+                    }
+                }
+
+                throw var8;
+            }
+
+            if (channel != null) {
+                channel.close();
+            }
+        } catch (Throwable var9) {
+            if (connection != null) {
+                try {
+                    connection.close();
+                } catch (Throwable var6) {
+                    var9.addSuppressed(var6);
+                }
+            }
+
+            throw var9;
         }
-        // selling
-        else {
-            System.out.printf("Match: %s buys %d %s from %s\n", targetOffer.op, targetOffer.count, targetOffer.item, currentOffer.op);
+
+        if (connection != null) {
+            connection.close();
         }
+
+
     }
 
     public static void start() {
         thread.start();
     }
 
-    public static void startMarket(){
+    public static void startMarket() throws Exception {
             System.out.println("Starting the market...");
             while(true){
                     if (Thread.interrupted()) {
