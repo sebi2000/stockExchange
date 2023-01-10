@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44fccc4b-9cb2-438d-92f6-e337ea2c9543" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Entities/StockExchange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Entities/StockExchange.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-    </list>
+    <list default="true" id="44fccc4b-9cb2-438d-92f6-e337ea2c9543" name="Default Changelist" comment="RabbitMQ done with 1 queue" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,6 +114,14 @@
       <workItem from="1673078979927" duration="20304000" />
       <workItem from="1673172969240" duration="32674000" />
     </task>
+    <task id="LOCAL-00001" summary="RabbitMQ done with 1 queue">
+      <created>1673302766516</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673302766516</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,5 +138,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="RabbitMQ done with 1 queue" />
+    <option name="LAST_COMMIT_MESSAGE" value="RabbitMQ done with 1 queue" />
   </component>
 </project>
